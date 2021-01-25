@@ -3,7 +3,7 @@
 Duck to PWA using BLE
 Beta 👇
 
-[ReactJS App](https://bluebird-26d49.web.app/) ⚛
+[Installable App](https://stackswan-f7c10.web.app/home) ⚛
 
 ## How to Run !
 
