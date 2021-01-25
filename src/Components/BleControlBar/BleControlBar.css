@@ -1,0 +1,207 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+
+.BleControlBar {
+  display: absolute;
+  z-index: 10;
+  background-color: #ffffff;
+  margin-top: 140px;
+  border-radius: 10px;
+  height: 50px;
+  width: 80%;
+}
+
+.controls {
+  margin-left: auto;
+  display: flex;
+  margin: 0px 10px 0px 50px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#send-form {
+  margin-left: 1vh;
+}
+
+#read {
+  background: #2c2a2a;
+  color: #ffffff;
+  border-radius: 5px;
+  width: 88px;
+  height: 35px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  padding: 1px 1px 1px 1px;
+  cursor: pointer;
+  border: 2px solid #2c2a2a;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  margin: 2px 2px 2px 2px;
+}
+
+#read:hover {
+  background: #2c2a2a;
+  border: 2px solid #2c2a2a;
+  color: #ffffff;
+}
+
+#start {
+  background: #ffffff;
+  color: #2c2a2a;
+  border-radius: 5px;
+  width: 88px;
+  height: 35px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  padding: 1px 1px 1px 1px;
+  cursor: pointer;
+  border: 2px solid #2c2a2a;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  margin: 2px 2px 2px 2px;
+}
+
+#start:hover {
+  background: #f0f0f0;
+  color: #2c2a2a;
+}
+
+#stop {
+  background: #ffffff;
+  color: #2c2a2a;
+  border-radius: 5px;
+  width: 88px;
+  height: 35px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  padding: 1px 1px 1px 1px;
+  cursor: pointer;
+  border: 2px solid #2c2a2a;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  margin: 2px 2px 2px 2px;
+}
+
+#stop:hover {
+  background: #f0f0f0;
+  color: #2c2a2a;
+}
+
+#input {
+  width: 214px;
+  height: 35px;
+  text-align: justify;
+  padding: 10px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 25px;
+  color: #2c2a2a;
+  background: #ffffff;
+  border: 1px solid #2c2a2a;
+  border-radius: 5px;
+  outline: none;
+  box-sizing: border-box;
+  margin: 2px 2px 2px 2px;
+}
+
+#input:focus {
+  border: 1px solid #2c2a2a;
+  box-shadow: 0px 0px 4px #2c2a2a;
+}
+
+/* Inforcing Safari to apply input CSS properties
+  (not required for other browsers)*/
+#input[type="search"] {
+  -webkit-appearance: textfield;
+}
+#submit {
+  background: #ffffff;
+  color: #2c2a2a;
+  border-radius: 5px;
+  width: 88px;
+  height: 35px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  padding: 1px 1px 1px 1px;
+  cursor: pointer;
+  border: 2px solid #2c2a2a;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  margin: 2px 2px 2px 2px;
+}
+
+#submit:hover {
+  background: #f0f0f0;
+  color: #2c2a2a;
+}
+
+@media screen and (max-width: 900px) {
+  .navbar {
+    height: 90px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  #stackswan-logo {
+    height: 4.5vh;
+    margin-bottom: 8px;
+    margin-top: 5px;
+  }
+
+  .controls {
+    margin: 0px 0px 0px 0px;
+  }
+
+  #read {
+    width: 60px;
+    height: 30px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 24px;
+  }
+
+  #start {
+    width: 60px;
+    height: 30px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 24px;
+    border-width: 0.5px;
+  }
+
+  #stop {
+    width: 60px;
+    height: 30px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 24px;
+    border-width: 0.5px;
+  }
+
+  #input {
+    width: 120px;
+    height: 30px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 24px;
+    font-weight: 400;
+  }
+  #submit {
+    width: 60px;
+    height: 30px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 24px;
+    border-width: 0.5px;
+  }
+}
