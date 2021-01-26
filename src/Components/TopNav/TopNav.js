@@ -8,7 +8,7 @@ export default function TopNav() {
     <div className="TopNav">
       <div className="navbar-container">
         <Link to="/">
-          <img id="stackswan-logo" src={stackswanLogo} alt="" />
+          <img id="stackswan-logo" src={stackswanLogo} />
         </Link>
       </div>
     </div>

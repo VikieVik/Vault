@@ -271,6 +271,7 @@
 @media screen and (max-width: 900px) {
   .MessageList {
     margin-top: 130px;
+    width: 90%;
   }
   .label-section {
     height: 80px;
