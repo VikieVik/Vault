@@ -5,7 +5,6 @@ import TopNav from "../../Components/TopNav/TopNav.js";
 import BottomNav from "../../Components/BottomNav/BottomNav.js";
 import MessageList from "../../Components/MessageList/MessageList.js";
 import stackswanFooterLogo from "../../img/stackswan-footer-logo.svg";
-import BleControlBar from "../../Components/BleControlBar/BleControlBar.js";
 
 function LiveData() {
   return (

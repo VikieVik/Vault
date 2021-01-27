@@ -39,7 +39,7 @@
   align-items: center;
 }
 
-#read {
+#connect-button {
   background: #2c2a2a;
   color: #ffffff;
   border-radius: 5px;
@@ -56,13 +56,13 @@
   margin: 2px 2px 2px 2px;
 }
 
-#read:hover {
+#connect-button:hover {
   background: #2c2a2a;
   border: 2px solid #2c2a2a;
   color: #ffffff;
 }
 
-#start {
+#start-button {
   background: #ffffff;
   color: #2c2a2a;
   border-radius: 5px;
@@ -79,12 +79,12 @@
   margin: 2px 2px 2px 2px;
 }
 
-#start:hover {
+#start-button:hover {
   background: #f0f0f0;
   color: #2c2a2a;
 }
 
-#stop {
+#stop-button {
   background: #ffffff;
   color: #2c2a2a;
   border-radius: 5px;
@@ -101,12 +101,12 @@
   margin: 2px 2px 2px 2px;
 }
 
-#stop:hover {
+#stop-button:hover {
   background: #f0f0f0;
   color: #2c2a2a;
 }
 
-#clear {
+#clear-button {
   background: #ffffff;
   color: #2c2a2a;
   border-radius: 5px;
@@ -123,12 +123,12 @@
   margin: 2px 2px 2px 2px;
 }
 
-#clear:hover {
+#clear-button:hover {
   background: #f0f0f0;
   color: #2c2a2a;
 }
 
-#input {
+#data-input {
   width: 214px;
   height: 35px;
   text-align: justify;
@@ -147,17 +147,17 @@
   margin: 2px 2px 2px 2px;
 }
 
-#input:focus {
+#data-input:focus {
   border: 1px solid #2c2a2a;
   box-shadow: 0px 0px 4px #2c2a2a;
 }
 
 /* Inforcing Safari to apply input CSS properties
   (not required for other browsers)*/
-#input[type="search"] {
+#data-input[type="search"] {
   -webkit-appearance: textfield;
 }
-#submit {
+#send-button {
   background: #ffffff;
   color: #2c2a2a;
   border-radius: 5px;
@@ -174,7 +174,7 @@
   margin: 2px 2px 2px 2px;
 }
 
-#submit:hover {
+#send-button:hover {
   background: #f0f0f0;
   color: #2c2a2a;
 }
@@ -189,14 +189,7 @@
 }
 
 #label-row-2-item-1,
-#label-row-2-item-2,
-#label-row-2-item-3,
-#label-row-2-item-4,
-#label-row-2-item-5,
-#label-row-2-item-6,
-#label-row-2-item-7,
-#label-row-2-item-8,
-#label-row-2-item-9 {
+#label-row-2-item-2 {
   font-family: Poppins;
   font-style: normal;
   font-weight: 500;
@@ -214,47 +207,6 @@
 
 #label-row-2-item-2 {
   position: absolute;
-  left: 12%;
-  display: none;
-}
-
-#label-row-2-item-3 {
-  position: absolute;
-  left: 24%;
-  display: none;
-}
-
-#label-row-2-item-4 {
-  position: absolute;
-  left: 35%;
-  display: none;
-}
-
-#label-row-2-item-5 {
-  position: absolute;
-  left: 46%;
-  display: none;
-}
-
-#label-row-2-item-6 {
-  position: absolute;
-  left: 54%;
-  display: none;
-}
-
-#label-row-2-item-7 {
-  position: absolute;
-  left: 63%;
-  display: none;
-}
-
-#label-row-2-item-8 {
-  position: absolute;
-  left: 72%;
-  display: none;
-}
-#label-row-2-item-9 {
-  position: absolute;
   left: 80%;
 }
 
@@ -266,6 +218,7 @@
   align-items: center;
   overflow-y: scroll !important;
   overflow: hidden;
+  outline: none;
 }
 
 @media screen and (max-width: 900px) {
@@ -300,8 +253,55 @@
     padding-top: 0px;
   }
   #label-row-2-item-1,
-  #label-row-2-item-9 {
+  #label-row-2-item-2 {
     padding-top: 8px;
     font-size: 14px;
+  }
+
+  .controls {
+    margin: 0px 0px 0px 0px;
+  }
+
+  #connect-button {
+    width: 60px;
+    height: 30px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 24px;
+  }
+
+  #start-button {
+    width: 60px;
+    height: 30px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 24px;
+    border-width: 0.5px;
+  }
+
+  #stop-button {
+    width: 60px;
+    height: 30px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 24px;
+    border-width: 0.5px;
+  }
+
+  #data-input {
+    width: 80px;
+    height: 30px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 24px;
+    font-weight: 400;
+  }
+  #send-button {
+    width: 60px;
+    height: 30px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 24px;
+    border-width: 0.5px;
   }
 }
