@@ -3,47 +3,55 @@
 
 // 👇 SETUP LOCAL AND REMOTE DB 👇
 //  🐦 Define DB here
+
 import PouchDB from "pouchdb";
 var db = new PouchDB("bluebirdDB");
 
 db.info().then(function (info) {
   console.log("We have a database: " + JSON.stringify(info));
 });
-var remoteCouch = false;
-// var remoteCouch = 'http://localhost:5984/bluebird'
-// http://127.0.0.1:5984/_utils/#
 
-// 🐦 If remoteCouch defined sync
-if (remoteCouch) {
+var remoteDB = "http://admin:admin@127.0.0.1:5984/stackswan";
+// go to http://127.0.0.1:5984/_utils/# for couchdb admin panel
+//var remoteDB = ("https://2b03ffe4-13ee-4754-80b0-9f8ef4495771-bluemix:81817ab384476c891c6589b442b48645782dccafdef6432ac914c4375c0856a2@2b03ffe4-13ee-4754-80b0-9f8ef4495771-bluemix.cloudantnosqldb.appdomain.cloud/bluebird_db");
+
+// 🐦 If remoteDB defined sync
+if (remoteDB) {
   sync();
 }
 
 // 👇 SETUP SYNC 👇
-// 🐦 sync - replicate to or from remote DB to local
+// 🐦 sync - replicate to or from remote DB to local\
+
 function sync() {
-  syncDom.setAttribute("data-sync-state", "syncing");
-  var opts = {
+  console.log("in-sync()");
+  db.sync(remoteDB, {
     live: true,
-  };
-  db.replicate.to(remoteCouch, opts, syncError);
-  db.replicate.from(remoteCouch, opts, syncError);
-}
-
-var syncDom = document.getElementById("sync-wrapper");
-
-// There was some form or error syncing
-function syncError() {
-  syncDom.setAttribute("data-sync-state", "error");
+    retry: true,
+  })
+    .on("change", function (change) {
+      console.log("sync-change");
+      // yo, something changed!
+    })
+    .on("paused", function (info) {
+      console.log("sync-paused");
+      // replication was paused, usually because of a lost connection
+    })
+    .on("active", function (info) {
+      console.log("sync-active");
+      // replication was resumed
+    })
+    .on("error", function (err) {
+      console.log("sync-error");
+      // totally unhandled error (shouldn't happen)
+    });
 }
 
 // 🐦  If new changes made to DB, display
-
-/** 
-  db.changes({
+db.changes({
   since: "now",
   live: true,
 }).on("change", showPayload);
-*/
 
 // 👇 SAVE TO DB 👇
 // 🐦 addPayload - adds incoming data from BLE Device to PouchDB

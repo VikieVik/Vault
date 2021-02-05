@@ -40,7 +40,7 @@
 }
 
 #connect-button {
-  background: #2c2a2a;
+  background: #5700ff;
   color: #ffffff;
   border-radius: 5px;
   width: 88px;
@@ -50,7 +50,7 @@
   line-height: 24px;
   padding: 1px 1px 1px 1px;
   cursor: pointer;
-  border: 2px solid #2c2a2a;
+  border: 2px solid #5700ff;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   margin: 2px 2px 2px 2px;
@@ -64,7 +64,7 @@
 
 #start-button {
   background: #ffffff;
-  color: #2c2a2a;
+  color: #5700ff;
   border-radius: 5px;
   width: 88px;
   height: 35px;
@@ -73,7 +73,7 @@
   line-height: 24px;
   padding: 1px 1px 1px 1px;
   cursor: pointer;
-  border: 2px solid #2c2a2a;
+  border: 2px solid #5700ff;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   margin: 2px 2px 2px 2px;
@@ -81,12 +81,12 @@
 
 #start-button:hover {
   background: #f0f0f0;
-  color: #2c2a2a;
+  color: #5700ff;
 }
 
 #stop-button {
   background: #ffffff;
-  color: #2c2a2a;
+  color: #5700ff;
   border-radius: 5px;
   width: 88px;
   height: 35px;
@@ -95,7 +95,7 @@
   line-height: 24px;
   padding: 1px 1px 1px 1px;
   cursor: pointer;
-  border: 2px solid #2c2a2a;
+  border: 2px solid #5700ff;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   margin: 2px 2px 2px 2px;
@@ -103,12 +103,12 @@
 
 #stop-button:hover {
   background: #f0f0f0;
-  color: #2c2a2a;
+  color: #5700ff;
 }
 
 #clear-button {
   background: #ffffff;
-  color: #2c2a2a;
+  color: #5700ff;
   border-radius: 5px;
   width: 88px;
   height: 35px;
@@ -117,7 +117,7 @@
   line-height: 24px;
   padding: 1px 1px 1px 1px;
   cursor: pointer;
-  border: 2px solid #2c2a2a;
+  border: 2px solid #5700ff;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   margin: 2px 2px 2px 2px;
@@ -125,7 +125,7 @@
 
 #clear-button:hover {
   background: #f0f0f0;
-  color: #2c2a2a;
+  color: #5700ff;
 }
 
 #data-input {
@@ -138,9 +138,9 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 25px;
-  color: #2c2a2a;
+  color: #5700ff;
   background: #ffffff;
-  border: 1px solid #2c2a2a;
+  border: 1px solid #5700ff;
   border-radius: 5px;
   outline: none;
   box-sizing: border-box;
@@ -148,8 +148,8 @@
 }
 
 #data-input:focus {
-  border: 1px solid #2c2a2a;
-  box-shadow: 0px 0px 4px #2c2a2a;
+  border: 1px solid #5700ff;
+  box-shadow: 0px 0px 4px #5700ff;
 }
 
 /* Inforcing Safari to apply input CSS properties
@@ -159,7 +159,7 @@
 }
 #send-button {
   background: #ffffff;
-  color: #2c2a2a;
+  color: #5700ff;
   border-radius: 5px;
   width: 88px;
   height: 35px;
@@ -168,7 +168,7 @@
   line-height: 24px;
   padding: 1px 1px 1px 1px;
   cursor: pointer;
-  border: 2px solid #2c2a2a;
+  border: 2px solid #5700ff;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   margin: 2px 2px 2px 2px;
@@ -176,7 +176,7 @@
 
 #send-button:hover {
   background: #f0f0f0;
-  color: #2c2a2a;
+  color: #5700ff;
 }
 
 .label-row-2 {

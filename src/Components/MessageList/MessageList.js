@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./MessageList.css";
 import Message from "../Message/Message.js";
-import db, { showPayload } from "../../Components/db.js";
+import db, { showPayload } from "../db.js";
 import { List, AutoSizer } from "react-virtualized";
-import faker from "faker";
 
 // BLE control functions
 import {

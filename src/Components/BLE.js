@@ -1,7 +1,7 @@
 /**
  * Here Goes BLE Logic
  */
-import { addPayload, showPayload } from "./db";
+import { addPayload, showPayload } from "./db.js";
 
 // same as SERVICE_UUID in arduino
 var bleService = "afa2f203-348f-4718-9cf3-f7ff0de38472";

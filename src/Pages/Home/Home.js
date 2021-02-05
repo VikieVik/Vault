@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Home.css";
 import { Link } from "react-router-dom";
+import ReactModal from "react-modal";
 import { connectToBleDevice } from "../../Components/BLE.js";
 import { Chart } from "react-google-charts";
 import TopNav from "../../Components/TopNav/TopNav.js";
@@ -10,6 +11,8 @@ import stackswanFooterLogo from "../../img/stackswan-footer-logo.svg";
 
 function Home() {
   const [installButtonDisplay, setInstallButtonDisplay] = useState("flex");
+  const [showModal, setShowModal] = useState(false);
+  const [remoteDBLink, setRemoteDBLink] = useState("");
   let deferredPrompt;
 
   useEffect(() => {
@@ -56,12 +59,64 @@ function Home() {
     });
   };
 
+  const addRemoteDBLink = () => {
+    setShowModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault(); // Prevent form sending
+    console.log("remote link is" + remoteDBLink);
+    event.target.value = "";
+    handleCloseModal();
+  };
+
+  const handleInputChnage = (event) => {
+    event.preventDefault(); // Prevent form sending
+    //save input value into state remoteDBLink
+    setRemoteDBLink(event.target.value);
+  };
   return (
     <div className="Home">
       <TopNav />
       <BottomNav />
       <div className="main-container">
         <div className="data-container">
+          {/** Modal for adding remote DB link */}
+          <ReactModal
+            isOpen={showModal}
+            contentLabel="onRequestClose Example"
+            onRequestClose={handleCloseModal}
+            ariaHideApp={false}
+            className="Modal"
+            overlayClassName="Overlay"
+          >
+            <p className="modal-text">
+              Remote DB Link can be used to sync all data of this app to another
+              DB.
+            </p>
+
+            {/** form for adding remote DB link */}
+            <form id="db-link-form" onSubmit={handleSubmit}>
+              <input
+                id="db-link-input"
+                type="search"
+                placeholder=" Your Remote DB link"
+                onChange={handleInputChnage}
+              />
+              <button
+                id="save-db-link-button"
+                type="submit"
+                onClick={handleSubmit}
+              >
+                SAVE
+              </button>
+            </form>
+          </ReactModal>
+
           <div className="network-card-grid">
             <button
               className="install-button"
@@ -70,8 +125,11 @@ function Home() {
             >
               Install This App
             </button>
-            <Card cardName="Berry Orchard" cardValue="7" />
-            <Card cardName="Chicken Farm" cardValue="5" />
+            <button className="install-button" onClick={addRemoteDBLink}>
+              Add Remote DB
+            </button>
+
+            <Card cardName="Demo" cardValue="0" />
           </div>
           <div className="local-connection-control-container">
             <h1 className="local-connection-title">Device Vitals</h1>

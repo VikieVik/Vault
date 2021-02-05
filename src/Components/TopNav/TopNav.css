@@ -9,7 +9,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  background: #2c2a2a;
+  background: #5700ff;
   z-index: 10;
 }
 
@@ -20,4 +20,8 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+
+#stackswan-logo {
+  margin-top: 10px;
 }
