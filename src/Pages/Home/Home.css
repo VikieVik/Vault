@@ -19,7 +19,7 @@
   background-color: #d9d9d9;
 }
 
-.data-container {
+.content-container {
   display: flex;
   min-height: 100%;
   width: 100%;
@@ -31,140 +31,9 @@
   overflow: hidden;
 }
 
-.Modal {
-  position: absolute;
-  top: 30vh;
-  left: 30vw;
-  right: 30vw;
-  bottom: 30vh;
-  outline: none;
-  border: none;
-  border-radius: 20px;
-  box-shadow: 1px 1px 20px #5e5e5e;
-  background-color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 0px 10px 0px 10px;
-}
-
-.Overlay {
-  position: absolute;
-  z-index: 11;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: hsla(0, 0%, 0%, 0.15);
-}
-
-.Modal p {
-  text-align: center;
-  padding: 0vw 4vw 0vw 4vw;
-  margin-bottom: 20px;
-  font-size: 16px;
-  color: #2c2a2a;
-  font-weight: 500;
-}
-
-#save-db-link-button {
-  background-color: #ffffff;
-  color: #26b950;
-  border: 2px solid #26b950;
-  font-weight: 500;
-  font-size: 16px;
-  border-radius: 5px;
-  height: 40px;
-  width: 70px;
-  margin: 0px 5px 5px 5px;
-  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  cursor: pointer;
-  outline: none;
-}
-
-#save-db-link-button:hover {
-  background-color: #26b950;
-  color: #ffffff;
-}
-
-#db-link-input {
-  width: 214px;
-  height: 40px;
-  text-align: justify;
-  padding: 10px;
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 25px;
-  color: #2c2a2a;
-  background: #ffffff;
-  border: 1px solid #26b950;
-  border-radius: 5px;
-  outline: none;
-  box-sizing: border-box;
-  margin: 2px 2px 2px 2px;
-}
-
-#db-link-input:hover {
-  border: 1px solid #26b950;
-  box-shadow: 0px 0px 4px #26b950;
-}
-
-#modal-close-button {
-  background-color: #ffffff;
-  color: red;
-  border: 2px solid red;
-  font-weight: 500;
-  font-size: 16px;
-  border-radius: 5px;
-  height: 40px;
-  width: 70px;
-  margin: 0px 5px 5px 5px;
-  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  cursor: pointer;
-}
-#modal-close-button:hover {
-  background-color: red;
-  color: #ffffff;
-}
-
-#modal-install-button {
-  background-color: #ffffff;
-  color: #26b950;
-  border: 2px solid #26b950;
-  font-weight: 500;
-  font-size: 16px;
-  border-radius: 5px;
-  height: 40px;
-  width: 70px;
-  margin: 0px 5px 5px 5px;
-  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  cursor: pointer;
-}
-#modal-install-button:hover {
-  background-color: #26b950;
-  color: #ffffff;
-}
-
-.network-card-grid {
-  display: grid;
-  grid-template-columns: 100px 100px 100px;
-  column-gap: 10px;
-  row-gap: 10px;
-}
-
-.local-connection-control-container {
-  margin-top: 20px;
-}
-
 .install-button {
-  height: 100px;
-  width: 100px;
+  height: 80px;
+  width: 60%;
   background: #ffffff;
   font-weight: 500;
   font-size: 24px;
@@ -193,25 +62,17 @@
   color: #2c2a2a;
 }
 
-.local-connection-vitals-card-grid {
-  display: grid;
-  grid-template-columns: 100px 100px 100px;
-  grid-template-rows: 100px 100px 0px;
-  column-gap: 10px;
-  row-gap: 10px;
-}
-
 .connect-button {
   margin-top: 10px;
+  margin-bottom: 10px;
   font-style: normal;
   font-weight: 600;
   font-size: 30px;
-  line-height: 41px;
   text-align: center;
   color: #ffffff;
-  width: 327px;
-  height: 75px;
-  background: #2dd75c;
+  height: 80px;
+  width: 60%;
+  background: #00aa63;
   border-radius: 10px;
   border: none;
   cursor: pointer;
@@ -224,15 +85,49 @@
   background: #26b950;
 }
 
-.live-data-Link {
+#send-password-form {
+  width: 100%;
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#password-input {
+  height: 80px;
+  width: 60%;
   font-style: normal;
+  font-weight: 500;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 20px;
+  color: #00aa63;
+  background: #ffffff;
+  border: 2px solid #00aa63;
+  outline: none;
+  box-sizing: border-box;
+  margin: 2px 2px 2px 2px;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+}
+
+#password-input:focus {
+  border: 3px solid #00aa63;
+  box-shadow: 0px 0px 10px #00aa63;
+}
+
+#password-send-button {
+  font-style: normal;
+  margin-top: 10px;
   font-weight: 500;
   font-size: 30px;
   line-height: 41px;
   text-align: center;
   color: #ffffff;
-  width: 327px;
-  height: 75px;
+  height: 80px;
+  width: 60%;
   background: #32a7dd;
   border-radius: 10px;
   border: none;
@@ -242,12 +137,9 @@
   -moz-transition: 0.3s;
 }
 
-.live-data-Link:hover {
+#password-send-button:hover {
   background: #258ebe;
-}
-
-.footer {
-  margin-top: auto;
+  color: #ffffff;
 }
 
 @media screen and (max-width: 900px) {

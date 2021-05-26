@@ -9,7 +9,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  background: #5700ff;
+  background: #00aa63;
   z-index: 10;
 }
 
@@ -22,6 +22,12 @@
   align-items: center;
 }
 
-#stackswan-logo {
-  margin-top: 10px;
+.navbar-container h1 {
+  font-size: 35px;
+  color: white;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
 }
