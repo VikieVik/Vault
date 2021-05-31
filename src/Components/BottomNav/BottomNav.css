@@ -1,0 +1,40 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+
+.BottomNav {
+  position: fixed;
+  bottom: 0;
+  width: 50%;
+  height: 55px;
+  background: rgba(255, 255, 255, 0.8);
+  z-index: 10;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.bottom-nav-container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+}
+
+.nav-link {
+  margin: 0px 15px 0px 15px;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 800px) {
+  .BottomNav {
+    width: 90%;
+  }
+}

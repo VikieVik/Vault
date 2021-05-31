@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Home.css";
 import { connectToBleDevice, sendToBleDevice } from "../../Components/BLE.js";
 import TopNav from "../../Components/TopNav/TopNav.js";
+import BottomNav from "../../Components/BottomNav/BottomNav";
 
 function Home() {
   const [installButtonDisplay, setInstallButtonDisplay] = useState("flex");
@@ -77,7 +78,7 @@ function Home() {
             Install This App
           </button>
           <button className="connect-button" onClick={connectToBleDevice}>
-            Press to Connect
+            Connect
           </button>
           <form id="send-password-form" onSubmit={handleSubmit}>
             <input
@@ -93,6 +94,7 @@ function Home() {
         </div>
 
         <div />
+        <BottomNav />
       </div>
     </div>
   );

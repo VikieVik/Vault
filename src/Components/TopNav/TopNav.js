@@ -7,7 +7,7 @@ export default function TopNav() {
     <div className="TopNav">
       <div className="navbar-container">
         <Link to="/">
-          <h1>Vault</h1>
+          <h1>VAULT</h1>
         </Link>
       </div>
     </div>
